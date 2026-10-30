@@ -6,14 +6,14 @@
     <title>Privacy Policy - Arrow Rush</title>
     <style>
         :root {
-            --bg-color: #0A0B12;
-            --surface-color: #131625;
-            --surface-border: #232840;
-            --primary-neon: #00F5FF;
-            --secondary-neon: #FF007F;
-            --text-main: #F0F4FC;
-            --text-muted: #9AA5BD;
-            --link-color: #00F5FF;
+            --bg-color: #0b0d17;
+            --card-bg: #151928;
+            --accent-cyan: #00f5ff;
+            --accent-pink: #ff007f;
+            --accent-gold: #ffd700;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border-color: #242b45;
         }
 
         * {
@@ -23,131 +23,232 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 16px 12px;
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 30px 15px;
         }
 
         .container {
-            background: var(--surface-color);
-            border: 1px solid var(--surface-border);
-            border-radius: 16px;
-            padding: 20px 16px;
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
 
-        header {
-            border-bottom: 1px solid var(--surface-border);
-            padding-bottom: 16px;
-            margin-bottom: 20px;
+        .header {
             text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        .logo-badge {
+        .app-badge {
             display: inline-block;
-            font-size: 11px;
+            background: rgba(0, 245, 255, 0.12);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(0, 245, 255, 0.35);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
             font-weight: 800;
-            color: var(--primary-neon);
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            background: rgba(0, 245, 255, 0.1);
-            border: 1px solid rgba(0, 245, 255, 0.3);
-            padding: 4px 10px;
-            border-radius: 14px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         h1 {
-            font-size: 22px;
+            font-size: 32px;
             font-weight: 900;
-            color: #FFFFFF;
-            margin-bottom: 4px;
+            color: #ffffff;
+            margin-bottom: 8px;
         }
 
-        .last-updated {
-            color: var(--text-muted);
-            font-size: 12px;
+        .updated-date {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .intro-box {
+            background: rgba(0, 245, 255, 0.05);
+            border-left: 4px solid var(--accent-cyan);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin-bottom: 25px;
         }
 
         h2 {
-            font-size: 16px;
-            color: var(--primary-neon);
-            margin-top: 22px;
-            margin-bottom: 8px;
+            font-size: 20px;
+            color: var(--accent-cyan);
+            margin-top: 30px;
+            margin-bottom: 12px;
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        p, ul {
-            margin-bottom: 12px;
-            color: var(--text-main);
-            font-size: 13.5px;
+        h2::before {
+            content: "◆";
+            color: var(--accent-pink);
+            font-size: 14px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            font-size: 15px;
         }
 
         ul {
-            margin-left: 18px;
+            margin-left: 20px;
+            margin-bottom: 18px;
         }
 
         li {
-            margin-bottom: 6px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-size: 15px;
         }
 
-        .highlight-box {
-            background: rgba(0, 245, 255, 0.05);
-            border-left: 3px solid var(--primary-neon);
-            padding: 12px 14px;
-            border-radius: 0 8px 8px 0;
-            margin: 14px 0;
-        }
-
-        .highlight-box p {
-            margin-bottom: 0;
+        li strong {
+            color: #ffffff;
         }
 
         a {
-            color: var(--link-color);
+            color: var(--accent-cyan);
             text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .info-card h3 {
+            font-size: 16px;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            background: rgba(255, 0, 127, 0.06);
+            border: 1px solid rgba(255, 0, 127, 0.25);
+            border-radius: 14px;
+            padding: 20px;
+            margin-top: 25px;
         }
 
         footer {
-            margin-top: 24px;
-            padding-top: 14px;
-            border-top: 1px solid var(--surface-border);
             text-align: center;
-            color: var(--text-muted);
-            font-size: 11px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 18px;
+            }
+            h1 {
+                font-size: 25px;
+            }
+            h2 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <div class="logo-badge">Arrow Rush</div>
-        <h1>Privacy Policy</h1>
-        <div class="last-updated">Effective Date: October 28, 2026</div>
-    </header>
-
-    <div class="highlight-box">
-        <p><strong>Arrow Rush</strong> respects and protects your privacy. We do not require accounts or store personal identities.</p>
+    <div class="header">
+        <div class="app-badge">Official Policy</div>
+        <h1>Privacy Policy for Arrow Rush</h1>
+        <div class="updated-date">Effective Date: October 30, 2026</div>
     </div>
 
-    <h2>1. Information We Collect</h2>
-    <p>All core gameplay data (high scores, coin balances, skin unlocks, sound and control preferences) is stored entirely offline on your local device.</p>
+    <div class="intro-box">
+        <p><strong>Arrow Rush</strong> ("we", "our", or "us") respects your privacy. This Privacy Policy details the types of information we do and do not collect, how local data is handled, and how third-party advertising services operate within the <strong>Arrow Rush</strong> mobile application on Android.</p>
+    </div>
 
-    <h2>2. Third-Party Advertising (AdMob)</h2>
-    <p>We use Google AdMob to display banner, interstitial, and rewarded ads. AdMob may automatically collect pseudonymous advertising IDs and device performance signals to serve advertisements.</p>
+    <h2>1. Information Collection & Use</h2>
+    <p>Arrow Rush is an arcade reflex game designed to be privacy-friendly. We do <strong>NOT</strong> require any account registration, email signup, personal names, phone numbers, or passwords to play.</p>
+    
+    <div class="card-grid">
+        <div class="info-card">
+            <h3>🎮 Local Storage Only</h3>
+            <p>Your high scores, collected coins, unlocked arrow skins, equipped themes, sound/vibration toggles, and achievements are stored solely on your local Android device via private app preferences.</p>
+        </div>
+        <div class="info-card">
+            <h3>🚫 No Personal Profiles</h3>
+            <p>We do not operate servers that log your identity, contact information, photos, files, or sensitive personal data.</p>
+        </div>
+    </div>
 
-    <h2>3. Permissions Used</h2>
+    <h2>2. Third-Party Advertising (Google AdMob)</h2>
+    <p>Arrow Rush displays advertisements provided by Google AdMob to support free gameplay (including Banner, Interstitial, and Native formats). These third-party ad networks may collect and process information such as:</p>
     <ul>
-        <li><strong>VIBRATE:</strong> Used solely for in-game tactile feedback. Can be disabled in Settings.</li>
-        <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Used to load ads and check connectivity.</li>
+        <li><strong>Device Identifiers:</strong> Advertising ID (GAID) and Android device model.</li>
+        <li><strong>Network & Diagnostics:</strong> IP-derived coarse general location and app performance diagnostics for fraud prevention and ad measurement.</li>
+    </ul>
+    <p>To learn how Google manages advertising data, please review Google's official documentation:</p>
+    <p>🔗 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy & Terms</a> | <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob Policies</a></p>
+
+    <h2>3. Android Permissions Required</h2>
+    <p>Our application requests only the minimum permissions necessary for gameplay and advertising:</p>
+    <ul>
+        <li><strong>VIBRATE:</strong> Used solely to generate tactile vibration pulses when matching arrows, hitting combos, or making mistakes. You can turn this off anytime in the in-game Settings.</li>
+        <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Allows the app to connect to Google AdMob servers to display test and live advertisements and check network connectivity.</li>
     </ul>
 
-    <h2>4. Children's Privacy</h2>
-    <p>Arrow Rush is built for general arcade audiences (ages 10+). We do not knowingly collect personal information from children under 13.</p>
+    <h2>4. Children’s Privacy (COPPA Compliance)</h2>
+    <p>Arrow Rush does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13 years of age. If you are a parent or guardian and become aware that your child has provided personal information, please contact us and we will promptly take appropriate action.</p>
 
-    <h2>5. Contact Developer</h2>
-    <p>Email: <a href="mailto:royaldesigner815@gmail.com">royaldesigner815@gmail.com</a></p>
+    <h2>5. Data Retention & How to Delete Data</h2>
+    <p>Because all gameplay data (scores, coins, unlocked skins) is saved exclusively on your local device, you can delete and reset all data at any time by:</p>
+    <ul>
+        <li>Tapping <strong>"RESET GAME SCORES"</strong> in the in-game Settings screen, or</li>
+        <li>Clearing App Storage / Cache in Android Settings &gt; Apps &gt; Arrow Rush &gt; Storage &gt; Clear Storage, or</li>
+        <li>Uninstalling the game from your Android device.</li>
+    </ul>
+
+    <h2>6. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any updates. Changes are effective immediately upon being posted on this page.</p>
+
+    <div class="contact-box">
+        <h2 style="margin-top: 0; color: #ffffff;">7. Contact Us</h2>
+        <p>If you have any questions or suggestions regarding our Privacy Policy, please reach out to us:</p>
+        <p>📧 <strong>Developer Email:</strong> <a href="mailto:royaldesigner815@gmail.com">royaldesigner815@gmail.com</a></p>
+        <p>📱 <strong>Application:</strong> Arrow Rush</p>
+    </div>
 
     <footer>
         &copy; 2026 Arrow Rush. All rights reserved.
